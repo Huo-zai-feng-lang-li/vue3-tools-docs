@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pnpm:install": "pnpm install && pnpm run docs:dev",
+    "docs:dev": "vitepress dev docs --open",
+    "docs:build": "vitepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "devDependencies": {
+    "vitepress": "latest"
+  }
+}
