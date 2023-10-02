@@ -36,7 +36,10 @@ export default defineConfig({
 			{
 				text: "Dropdown Menu",
 				items: [
-					{ text: "Item A", link: "/item-1" },
+					{
+						text: "Website-zhangKun",
+						link: "https://huozaifenlangli.github.io/Website-zhangkun/home.html",
+					},
 					{ text: "Item B", link: "/item-2" },
 					{ text: "Item C", link: "/item-3" },
 				],
