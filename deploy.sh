@@ -12,8 +12,10 @@ cd docs/.vitepress/dist  #进到dist目录
 git init  #执行这些git命令
 git add -A
 git commit -m 'deploy'
- #本地的 master 分支强制推送到远程仓库的 gh-pages 分支。
-git push -f git@github.com:huozaifenlangli/vue3-tools-docs.git main-pages 
+ # 重命名分支 -M 重命名分支 -u 起一个别名
+git branch -M main-pages
+# 在main分支提交到main-pages分支上
+git push -f git@github.com:huozaifenlangli/vue3-tools-docs.git main:main-pages 
 
 cd - # 退回开始所在目录
 
