@@ -15,7 +15,7 @@ git commit -m 'deploy'
  # 重命名分支 -M 重命名分支 -u 起一个别名
 git branch -M main-pages
 # 在main分支提交到main-pages分支上
-git push -f git@github.com:huozaifenlangli/vue3-tools-docs.git main:main-pages 
+git push -f https://github.com/huozaifenlangli/vue3-tools-docs.git main-pages 
 
 cd - # 退回开始所在目录
 

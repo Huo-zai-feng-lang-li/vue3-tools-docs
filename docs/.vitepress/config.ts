@@ -49,14 +49,16 @@ export default defineConfig({
 			{
 				text: "开篇_前言",
 				items: [
-					{ text: "Document-index 梦开始的地方", link: "/example" },
+					{ text: "梦开始的地方 Document-index ", link: "/example" },
 					// ...
 				],
 			},
 			{
-				text: "My Guide",
+				text: "NPM包 STORE",
 				items: [
-					{ text: "leetcode", link: "/leetcode" },
+					{ text: "指令 NPM", link: "/vue3-directive-tools" },
+					{ text: "加密 NPM", link: "/vue3-encryption-plugin" },
+					{ text: "loading NPM", link: "/vue3-loading-plug" },
 					// ...
 				],
 			},
