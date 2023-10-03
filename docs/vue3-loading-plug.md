@@ -52,11 +52,11 @@ router.afterEach((to) => {
 scrvies
 
 ```javascript
-const hideLoading = () =>
-	app.config.globalProperties.$smallLoading.hideLoading();
+const hideLoading = () => app.config.globalProperties.$smallLoading.hideLoading;
 const showLoading = () =>
 	app.config.globalProperties.$smallLoading.showLoading();
 let onProgress = () => app.config.globalProperties.$smallLoading.onProgress;
+
 // 请求拦截器
 service.interceptors.request.use(
 	(config) => {
@@ -72,20 +72,20 @@ service.interceptors.request.use(
 	},
 	(error) => {
 		// 对请求错误做些什么？
-		hideLoading();
+		// 第二个括号参数为空时，200ms后隐藏loading, 为了展示loading 进度100%效果
+		hideLoading()();
+       // hideLoading()(true); // 传入true时，不会延迟隐藏loading
 		return Promise.reject(error);
 	}
 );
+
 // 响应拦截器
 service.interceptors.response.use(
 	(response) => {
 		// 对响应数据做点什么？ 这里只返回成功响应数据！
-		hideLoading();
+		hideLoading()();
 		return response.data;
 	},
-	(error) => {
-		// 对响应错误数据做点什么？这里只显示错误消息！
-		hideLoading();
-	}
+	(error) => hideLoading()();
 );
 ```
