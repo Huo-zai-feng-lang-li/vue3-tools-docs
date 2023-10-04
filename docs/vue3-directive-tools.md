@@ -309,6 +309,8 @@ import { isType } from "vue3-directive-tools";
 onMounted(() => {
 	// typeof 运算符返回 Symbol 的类型为 "function"，因为它可以像函数一样调用来创建新的 Symbol。
 	console.log("🤺🤺 function 🚀 ==>:", typeof Symbol);
+	console.log("🤺🤺 function 🚀 ==>:", isType(Symbol));
+	console.log("🤺🤺 symbol 🚀 ==>:", isType(Symbol("Foo")));
 	console.log("🤺🤺 object 🚀 ==>:", isType({ name: "张坤", sex: "男" }));
 	console.log("🤺🤺 string 🚀 ==>:", isType("666"));
 	console.log("🤺🤺 string 🚀 ==>:", isType("777"));
