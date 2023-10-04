@@ -13,20 +13,23 @@ npm install vue3-directive-tools
 
 > 此工具库是基于 Element-plus、Sass、Node、Ts，请您在安装以上依赖后使用此辅助库，它可帮您快速开发功能、您只需使用 v-xx="" ；
 
-## 2、指令的使用方法
+## 2、注入
 
-在你的主应用程序入口文件（例如 main.js）中，导入并使用 directive ：
+在你的主应用程序入口文件（例如 **main.js**）中，导入并使用 directive ：
 
 ```javascript
 import { directive } from "vue3-directive-tools";
 app.use(directive).mount("#app");
 ```
 
+## 3、指令的使用方法
+
 ## **copy**
 
-> v-copy="data"
+> v-copy="data" <br />
+> 一键复制
 
-```javascript
+```javascript{7}
 <template>
 	<div class="card content-box">
 		<span class="text">复制指令 🍇🍇🍇🍓🍓🍓</span>
@@ -48,22 +51,140 @@ const data = ref<string>('我是被复制的内容 🍒 🍉 🍊');
 
 ## **debounce**
 
-> v-debounce="debounceInput"
+> v-debounce="debounceInput" <br />
+> 防抖
 
-```javascript
-  <el-input
-	v-debounce="debounceInput"
-	v-model.trim="iptVal"
-	placeholder="防抖输入框 (0.5秒后执行)"
-	style="width: 100%"
- />
+```javascript{5}
+  <template>
+	<div class="card content-box">
+		<span class="text">input防抖指令 🍇🍇🍇🍓🍓🍓</span>
+		<el-input
+			v-debounce="debounceInput"
+			v-model.trim="iptVal"
+			placeholder="防抖输入框 (0.5秒后执行)"
+			style="width: 100%"
+		/>
+		<section>
+			<ul v-if="flag">
+				<a
+					v-for="(item, index) in listArr"
+					:key="index"
+					:href="item.link"
+					class="link"
+				>
+					<li v-html="item.uname"></li>
+				</a>
+			</ul>
+		</section>
+	</div>
+</template>
+
+<script lang="ts" setup>
+import { ElMessage } from "element-plus";
+import { onMounted, ref, reactive } from "vue";
+
+// 双向绑定的搜索默认值
+let iptVal = ref<string>("");
+// 被搜索的列表，真实项目中应该是从后台获取的数据
+let listArr: Array<{ uname: string; link: string }> = reactive([
+	{
+		uname: "Vue项目实战 —— 后台管理系统( pc端 ) —— Pro最终版本 <",
+		link: "https://blog.csdn.net/m0_57904695/article/details/129730440?spm=1001.2014.3001.5501",
+	},
+	{
+		uname:
+			"【提高代码可读性】—— 手握多个代码优化技巧、细数哪些惊艳一时的策略 <>",
+		link: "https://blog.csdn.net/m0_57904695/article/details/128318224?spm=1001.2014.3001.5502",
+	},
+	{
+		uname:
+			"开源项目 —— 原生JS实现斗地主游戏 ——代码极少、功能都有、直接粘贴即用 >",
+		link: "https://blog.csdn.net/m0_57904695/article/details/128982118?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169639671216800226593158%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=169639671216800226593158&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-128982118-null-null.nonecase&utm_term=%E6%B8%B8%E6%88%8F&spm=1018.2226.3001.4450",
+	},
+	{
+		uname: "Vue3项目 —— Vite / Webpack 批量注册组件",
+		link: "https://blog.csdn.net/m0_57904695/article/details/128919255?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169639673416800226554419%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=169639673416800226554419&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-128919255-null-null.nonecase&utm_term=%E6%89%B9%E9%87%8F%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6&spm=1018.2226.3001.4450",
+	},
+	{
+		uname:
+			"Vue3 项目实战 —— 后台管理系统( pc端 ) —— 动态多级导航菜单顶部侧边联动",
+		link: "https://blog.csdn.net/m0_57904695/article/details/128740216?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169639675316800185838816%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=169639675316800185838816&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-128740216-null-null.nonecase&utm_term=%E5%8A%A8%E6%80%81%E5%A4%9A%E7%BA%A7%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95%E9%A1%B6%E9%83%A8%E4%BE%A7%E8%BE%B9%E8%81%94%E5%8A%A8&spm=1018.2226.3001.4450",
+	},
+]);
+
+let flag = ref<boolean>(false);
+const debounceInput = () => {
+	// 初始化 恢复高亮 重置数据
+	flag.value = false;
+	listArr = JSON.parse(JSON.stringify(listArr));
+	// 装换成数组，方便循环
+	let searchVal = iptVal.value.split("");
+	if (iptVal.value == "") return;
+	var regex = /^[0-9a-zA-Z\u4e00-\u9fa5]+$/;
+	if (regex.test(iptVal.value)) {
+		// 匹配成功，iptVal.value只包含数字、汉字和字母
+		// 输入框的值转为数组方便循环，在循环得到搜索框的每一项，与列表中的每一项进行匹配，如果匹配到，就替换标签，高亮展示
+		searchVal.forEach((searchValItem: string) => onReplace(searchValItem));
+	} else {
+		// 匹配失败，iptVal.value包含其他字符
+		ElMessage.error("只能查找数字、汉字和字母");
+	}
+};
+
+// 高亮替换标签函数
+function onReplace(searchValItem: string) {
+	// 循环列表 { @listArrItem } 列表的每一项
+	listArr.forEach((listArrItem) => {
+		// 如果搜索框的值不在列表中，直接终止返回
+		if (listArrItem.uname.indexOf(searchValItem) == -1) return;
+		// 替换的标签样式
+		let hightStr = `<em style='color: #333333;
+                    font-weight: bold;
+                    font-style: normal;
+                    background-image: url(https://t8.baidu.com/it/u=1501552470,2690656309&fm=167&app=3000&f=PNG&fmt=auto&q=100&size=f624_21);
+                    background-repeat: repeat-x;
+                    background-position-y: bottom;
+                    background-size: 100% 8px;
+                    '>
+                    ${searchValItem}
+                  </em>`;
+
+		// 不匹配已有<em></em> 高亮标签的内容
+		let reg = new RegExp(`(?![^<]*>|[^<>]*<\/em>)${searchValItem}`, "gi");
+		listArrItem.uname = listArrItem.uname.replace(reg, hightStr);
+		flag.value = true;
+	});
+}
+
+// 进入页面时，自动聚焦到搜索框
+onMounted(() => {
+	let foc = document.querySelector(".el-input__inner") as HTMLInputElement;
+	foc.focus();
+});
+</script>
+
+<style lang="scss" scoped>
+// a.link 这是一个交集选择器，即同时满足span和.highth的元素
+a.link {
+	// 去掉默认色
+	color: #333333;
+	// 去掉下划线
+	text-decoration: none;
+	// 鼠标移入时的样式
+	&:hover {
+		color: #4a8cd6;
+		text-decoration: none;
+	}
+}
+</style>
 ```
 
 ## **draggable**
 
-> v-draggable
+> v-draggable <br />
+> 拖拽
 
-```javascript
+```javascript{4}
 <template>
 	<div class="content-box">
 		<span class="text">拖拽指令 🍇🍇🍇🍓🍓🍓</span>
@@ -89,7 +210,8 @@ const data = ref<string>('我是被复制的内容 🍒 🍉 🍊');
 
 ## **longpress**
 
-> v-longpress="longpress"
+> v-longpress="longpress" <br />
+> 长按
 
 ```javascript
 <template>
@@ -111,7 +233,8 @@ const longpress = () => {
 
 ## **throttle**
 
-> v-throttle="throttleClick"
+> v-throttle="throttleClick" <br />
+> 节流
 
 ```javascript
 <template>
@@ -133,27 +256,38 @@ const throttleClick = () => {
 
 ## **waterMarker**
 
+> 防篡改水印
+
 ```html
 <div
 	v-waterMarker="{text:'版权所有',textColor:'rgba(180, 180, 180, 0.4)'}"
 ></div>
 ```
 
-## 3、utils\工具的使用方法
+## 4、Hooks 的使用方法
 
-## debounceRest
+## debounceRest <br />
+
+> 更加丰富的 **防抖** 可以传参数
 
 ```javascript
-<el-button @click="handClick('我是参数')">首页</el-button>
+<template>
+	<el-button type="primary" @click="onDbo('我是参数')"
+		>防抖按钮 (0.5秒后执行)</el-button
+	>
+</template>
 
+<script setup lang="ts">
 import { debounceRest } from "vue3-directive-tools";
-
-const handClick = debounceRest((varStr: string) => {
-	console.log("！这里输出防抖 🚀 ==>：", varStr);
-}, 250);
+const onDbo = debounceRest((valStr: string) => {
+	console.log("😂👨🏾‍❤‍👨🏼==>：", valStr);
+}, 500);
+</script>
 ```
 
-## isEvenOrOdd
+## isEvenOrOdd <br />
+
+> 判断奇数偶数
 
 ```javascript
 <el-button @click="handClick">判断奇数偶数</el-button>
@@ -165,7 +299,7 @@ function handClick() {
 }
 ```
 
-## 4、npm 命令大全(扩展)
+## 5、npm 命令大全(扩展)
 
 > 以下是一些常见的 npm 命令：
 
