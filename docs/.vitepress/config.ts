@@ -40,7 +40,10 @@ export default defineConfig({
 						text: "Website-zhangKun",
 						link: "https://huozaifenlangli.github.io/Website-zhangkun/home.html",
 					},
-					{ text: "Item B", link: "/item-2" },
+					{
+						text: "directive-更新日志",
+						link: "/UpdateLog/vue3-directive-tools.md",
+					},
 					{ text: "Item C", link: "/item-3" },
 				],
 			},
