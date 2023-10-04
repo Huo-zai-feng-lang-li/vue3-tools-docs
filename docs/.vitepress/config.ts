@@ -41,10 +41,13 @@ export default defineConfig({
 						link: "https://huozaifenlangli.github.io/Website-zhangkun/home.html",
 					},
 					{
-						text: "directive-更新日志",
+						text: "Directive-更新日志",
 						link: "/UpdateLog/vue3-directive-tools.md",
 					},
-					{ text: "Item C", link: "/item-3" },
+					{
+						text: "NPM-Project-地址",
+						link: "https://huozaifenlangli.github.io/Vue3-template/#/home",
+					},
 				],
 			},
 

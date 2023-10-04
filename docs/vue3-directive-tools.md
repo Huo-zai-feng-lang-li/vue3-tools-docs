@@ -307,10 +307,11 @@ function handClick() {
 import { isType } from "vue3-directive-tools";
 
 onMounted(() => {
-	console.log("🤺🤺  🚀 ==>:", isType(Symbol));
-	console.log("🤺🤺  🚀 ==>:", isType({ name: "张坤", sex: "男" }));
-	console.log("🤺🤺  🚀 ==>:", isType("666"));
-	console.log("🤺🤺  🚀 ==>:", isType("777"));
+	// typeof 运算符返回 Symbol 的类型为 "function"，因为它可以像函数一样调用来创建新的 Symbol。
+	console.log("🤺🤺 function 🚀 ==>:", typeof Symbol);
+	console.log("🤺🤺 object 🚀 ==>:", isType({ name: "张坤", sex: "男" }));
+	console.log("🤺🤺 string 🚀 ==>:", isType("666"));
+	console.log("🤺🤺 string 🚀 ==>:", isType("777"));
 });
 ```
 
