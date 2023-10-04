@@ -213,7 +213,7 @@ a.link {
 > v-longpress="longpress" <br />
 > 长按
 
-```javascript
+```javascript{4}
 <template>
 	<div class="card content-box">
 		<span class="text">长按指令 🍇🍇🍇🍓🍓🍓</span>
@@ -236,7 +236,7 @@ const longpress = () => {
 > v-throttle="throttleClick" <br />
 > 节流
 
-```javascript
+```javascript{4}
 <template>
 	<div class="card content-box">
 		<span class="text">节流指令 🍇🍇🍇🍓🍓🍓</span>
@@ -270,7 +270,7 @@ const throttleClick = () => {
 
 > 更加丰富的 **防抖** 可以传参数
 
-```javascript
+```javascript{8}
 <template>
 	<el-button type="primary" @click="onDbo('我是参数')"
 		>防抖按钮 (0.5秒后执行)</el-button
@@ -287,9 +287,9 @@ const onDbo = debounceRest((valStr: string) => {
 
 ## isEvenOrOdd <br />
 
-> 判断奇数偶数
+> 判断**奇数偶数**
 
-```javascript
+```javascript{2,5}
 <el-button @click="handClick">判断奇数偶数</el-button>
 import { isEvenOrOdd } from "vue3-directive-tools";
 
@@ -297,6 +297,21 @@ function handClick() {
 	const isEvenOrOdd = isEvenOrOdd(123);
 	console.log("！这里输出奇偶判断 🚀 ==>：", isEvenOrOdd);
 }
+```
+
+## isType <br />
+
+> 判断**数据类型**
+
+```javascript{1}
+import { isType } from "vue3-directive-tools";
+
+onMounted(() => {
+	console.log("🤺🤺  🚀 ==>:", isType(Symbol));
+	console.log("🤺🤺  🚀 ==>:", isType({ name: "张坤", sex: "男" }));
+	console.log("🤺🤺  🚀 ==>:", isType("666"));
+	console.log("🤺🤺  🚀 ==>:", isType("777"));
+});
 ```
 
 ## 5、npm 命令大全(扩展)

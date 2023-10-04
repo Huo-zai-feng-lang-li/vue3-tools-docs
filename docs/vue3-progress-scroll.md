@@ -47,7 +47,7 @@ app.mount("#app");
 
 > 第一种 inject
 
-```js{4,7-9}
+```js{4}
 /* Step 3
 -------------------------------------------- */
 // 在父容器绑定类名
@@ -61,7 +61,7 @@ inject(scrollKey)?.$openScroll();
 inject(scrollKey)?.$closeScroll();
 ```
 
-```javascript{4,19-21}
+```javascript{3,,18-21}
 
   /* 使用示例 Demo */
 <template>

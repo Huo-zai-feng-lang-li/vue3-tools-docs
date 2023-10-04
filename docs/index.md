@@ -17,7 +17,7 @@ hero:
       # link: https://github.com/vuejs/vitepress
       link: https://github.com/huozaifenlangli/vue3-tools-docs
   image:
-    src: ./index.gif
+    src: /index.gif
     alt: NPM
 
 features:
