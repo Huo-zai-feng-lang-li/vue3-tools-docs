@@ -2,11 +2,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "commit": "git pull && git add -A && git-cz && git push && pnpm run docs:build && cd docs/.vitepress/dist && git init && git add -A && git commit -m 'deploy' && git push -f https://github.com/huozaifenlangli/vue3-tools-docs.git main-pages && cd ../ && rmdir dist",
+    "commit": "git pull && git add -A && git-cz && git push ",
     "pnpm:install": "pnpm install && pnpm run docs:dev",
     "docs:dev": "vitepress dev docs --open",
     "docs:build": "vitepress build docs",
-    "deploy": "bash deploy.sh"
+    "deploy": "bash deploy.sh",
+    "start": "pnpm run docs:build && cd docs/.vitepress/dist && git init && git add -A && git commit -m 'deploy' && git push -f https://github.com/huozaifenlangli/vue3-tools-docs.git main-pages && cd ../ && rmdir /s /q dist"
   },
   "config": {
     "commitizen": {
