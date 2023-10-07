@@ -24,7 +24,7 @@ app.use(directive).mount("#app");
 
 ## 3、指令的使用方法
 
-## **copy**
+### **copy**
 
 > v-copy="data" <br />
 > 一键复制
@@ -49,7 +49,7 @@ const data = ref<string>('我是被复制的内容 🍒 🍉 🍊');
 </script>
 ```
 
-## **debounce**
+### **debounce**
 
 > v-debounce="debounceInput" <br />
 > 防抖
@@ -179,7 +179,7 @@ a.link {
 </style>
 ```
 
-## **draggable**
+### **draggable**
 
 > v-draggable <br />
 > 拖拽
@@ -208,7 +208,7 @@ a.link {
 </style>
 ```
 
-## **longpress**
+### **longpress**
 
 > v-longpress="longpress" <br />
 > 长按
@@ -231,7 +231,7 @@ const longpress = () => {
 </script>
 ```
 
-## **throttle**
+### **throttle**
 
 > v-throttle="throttleClick" <br />
 > 节流
@@ -254,7 +254,7 @@ const throttleClick = () => {
 </script>
 ```
 
-## **waterMarker**
+### **waterMarker**
 
 > 防篡改水印
 
@@ -266,7 +266,7 @@ const throttleClick = () => {
 
 ## 4、Hooks 的使用方法
 
-## debounceRest <br />
+### debounceRest <br />
 
 > 更加丰富的 **防抖** 可以传参数
 
@@ -285,7 +285,7 @@ const onDbo = debounceRest((valStr: string) => {
 </script>
 ```
 
-## isEvenOrOdd <br />
+### isEvenOrOdd <br />
 
 > 判断**奇数偶数**
 
@@ -299,7 +299,7 @@ function handClick() {
 }
 ```
 
-## isType <br />
+### isType <br />
 
 > 判断**数据类型**
 
