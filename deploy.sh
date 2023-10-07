@@ -2,7 +2,13 @@
  
 # 忽略错误
 set -e  #有错误抛出错误
- 
+
+ # 检查并删除 dist 目录
+if [ -d "dist" ]; then
+  echo "dist目录存在,自动帮您删除了- dist文件"
+  rm -rf dist
+fi
+
 # 构建
 pnpm run docs:build  #然后执行打包命令
  
