@@ -1,4 +1,4 @@
-# progress-scroll 滚动进度插件
+# progress-scroll 滚动进度插件.
 
 > 🤖🎉🎉 您的 进度监控 插件是一个基于 原生 Css 封装的实用 hooks 工具，用于在 Vue.js 应用程序中展示进度。它提供了一种简单、定制且具备高兼容性 。
 
