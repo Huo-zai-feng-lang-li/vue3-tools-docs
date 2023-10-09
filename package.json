@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "commit": "git pull && git add -A && git-cz && git push && pnpm run deploy:dep",
+    "commit": "git pull && git add -A && git-cz && git push && pnpm run deploy:dev",
     "pnpm:install": "pnpm install && pnpm run docs:dev",
     "docs:dev": "vitepress dev docs --open",
     "docs:build": "vitepress build docs",

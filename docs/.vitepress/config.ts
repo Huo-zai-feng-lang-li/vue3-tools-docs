@@ -66,8 +66,8 @@ export default defineConfig({
 				text: "NPM包 STORE",
 				items: [
 					{ text: "directive-tools NPM", link: "/vue3-directive-tools" },
-					{ text: "encryption-plugin NPM", link: "/vue3-encryption-plugin" },
 					{ text: "loading-plugin NPM", link: "/vue3-loading-plug" },
+					{ text: "encryption-plugin NPM", link: "/vue3-encryption-plugin" },
 					{ text: "progress-scroll NPM", link: "/vue3-progress-scroll" },
 					// ...
 				],
