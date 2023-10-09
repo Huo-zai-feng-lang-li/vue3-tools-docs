@@ -12,7 +12,6 @@
 
 ```javascript
 npm i vue3-progress-scroll
-pnpm i vue3-progress-scroll
 ```
 
 ## 🛹 注入
@@ -22,23 +21,25 @@ pnpm i vue3-progress-scroll
 
 ```javascript
 /* Step 1
--------------------------------------------- */
-import useScroll from "vue3-progress-scroll"; // 引入css进度条
+------------------------------------------------------------------ */
+import { useScroll } from "vue3-progress-scroll";
 const app = createApp(App);
+app.use(useScroll);
+```
 
-/* Step 2 
--------------------------------------------- */
+### 🎉 配置
+
+```javascript
+/* Step 2
+------------------------------------------------------------------ */
 // 注册插件并提供自定义的进度条属性（可选）例如：
 app.use(useScroll, {
 	progress: "green", // 进度条颜色
 	progressRollback: "#fff", // 进度条回滚颜色
-	progressTop: "89px", // 进度条距离顶部的距离
-	progressLeft: "290px", // 进度条距离左边的距离
+	progressTop: "3px", // 进度条距离顶部的距离
+	progressLeft: "0px", // 进度条距离左边的距离
 	UIViewBackground: "#fff", // 页面背景色
 });
-或者;
-app.use(useScroll);
-app.mount("#app");
 ```
 
 ## 🤖 使用方法
@@ -49,7 +50,7 @@ app.mount("#app");
 
 ```js{4}
 /* Step 3
--------------------------------------------- */
+------------------------------------------------------------------ */
 // 在父容器绑定类名
 <div class="ProgressTopBar">
     <p v-for="(item, index) in items" :key="index">{{ item }}</p>
@@ -61,9 +62,9 @@ inject(scrollKey)?.$openScroll();
 inject(scrollKey)?.$closeScroll();
 ```
 
-```javascript{3,,18-21}
+```javascript
 
-  /* 使用示例 Demo */
+  /* 使用示例 Demo.vue */
 <template>
 	<div class="ProgressTopBar">
 		<p v-for="(item, index) in items" :key="index">{{ item }}</p>

@@ -7,7 +7,7 @@
     "docs:dev": "vitepress dev docs --open",
     "docs:build": "vitepress build docs",
     "deploy": "bash deploy.sh",
-    "deploy:dep": "pnpm run docs:build && cd docs/.vitepress/dist && git init && git add -A && git commit -m 'deploy' && git branch -M main-pages && git push -f https://github.com/huozaifenlangli/vue3-tools-docs.git main-pages && cd ../ && rmdir /s /q dist"
+    "deploy:dev": "pnpm run docs:build && cd docs/.vitepress/dist && git init && git add -A && git commit -m 'deploy' && git branch -M main-pages && git push -f https://github.com/huozaifenlangli/vue3-tools-docs.git main-pages && cd ../ && rmdir /s /q dist"
   },
   "config": {
     "commitizen": {
