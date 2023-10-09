@@ -15,9 +15,10 @@ npm install vue3-loading-plug
 pnpm install vue3-loading-plug
 ```
 
-## ♻️ 演示地址：
+## 🛹 简介苍白请 您移步文档：
 
-[一键轻松看](http://project.webcats.cn/bx/43924/16191)
+- [一键轻松看-尝试刷新页面将自动随机展示 loading](https://huozaifenlangli.github.io/Vue3-template/#/home)<br />
+- [一键快阅文档](https://huozaifenlangli.github.io/vue3-tools-docs/vue3-loading-plug.html)
 
 ## ✈️ 使用方法
 
@@ -25,9 +26,9 @@ pnpm install vue3-loading-plug
 
 > 内置两大类 loading 【可自行配置】
 >
-> ​ 一、Loading 是 大 loading 可以用于刷新项目页面、路由跳转 。在路由中引入一次 即可全局生效，极简配置
+> ​ 一、`Loading` 是 大 loading 可以用于刷新项目页面、路由跳转 。在路由中引入一次 即可全局生效，极简配置
 >
-> ​ 二、smallLoading 是小圆圈带加载进度 loading，一般用于接口请求展示。可以请求拦截器中开启，全局接口生效，极简配置
+> ​ 二、`smallLoading` 是小圆圈带加载进度 loading，一般用于接口请求展示。可以请求拦截器中开启，全局接口生效，极简配置
 
 在你的主应用程序入口文件（例如 main.js）中，导入并使用 loading ：
 
@@ -41,7 +42,7 @@ app.use(Loading).mount("#app");
 ### 🛠️ 配置 loading 类型
 
 > 你可以在安装插件时传入一个配置对象。<br />
-> 这个配置对象有一个 loadingType 属性，这个属性决定了使用哪种类型的 loading 组件。<br />
+> 这个配置对象有一个 `loadingType` 属性，这个属性决定了使用哪种类型的 loading 组件。<br />
 > 如果你不传入 loadingType，那么将会**随机**选择一个 loading 组件。
 
 ```js{2}
@@ -54,7 +55,7 @@ app.use(Loading, {
 
 - 我们目前更新了 7 款 loading 组件，每一款都有自己的默认颜色,也可以如下自定制。
 
-  > 这个配置对象还有一个 customized 属性，这个属性的值决定了 loading 组件的颜色展示和遮罩的色彩呈现。（它们都是非必填）
+  > 这个配置对象还有一个 `customized` 属性，这个属性的值决定了 loading 组件的颜色展示和遮罩的色彩呈现。（它们都是非必填）
   > ![Alt text1](/image-1.png)
 
   > ![Alt text2](/image-2.png)
@@ -142,7 +143,7 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach((to) => {
-	// 第二个参数为关闭loading的时间，无参即是根据上下文环境30ms关闭
+	// 第二个参数为关闭loading的时间，无参即是根据上下文环境300ms关闭
 	if (to.meta.loading) hideLoading()(400);
 });
 ```

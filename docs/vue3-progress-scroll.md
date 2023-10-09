@@ -1,4 +1,4 @@
-# progress-scroll 滚动进度插件
+# progress-scroll 滚动进度可视化插件
 
 > 🤖🎉🎉 您的 进度监控 插件是一个基于 原生 Css 封装的实用 hooks 工具，用于在 Vue.js 应用程序中展示进度。它提供了一种简单、定制且具备高兼容性 。
 
@@ -48,12 +48,12 @@ app.use(useScroll, {
 
 > 第一种 inject
 
-```js{4}
+```javascript
 /* Step 3
 ------------------------------------------------------------------ */
 // 在父容器绑定类名
 <div class="ProgressTopBar">
-    <p v-for="(item, index) in items" :key="index">{{ item }}</p>
+    <p v-for="(item, index) in 1000" :key="index">{{ index + 1 }}</p>
 </div>
 
 import { ref, inject } from "vue";
@@ -62,9 +62,19 @@ inject(scrollKey)?.$openScroll();
 inject(scrollKey)?.$closeScroll();
 ```
 
+> 第二种 getCurrentInstance()
+
+```javascript
+import { getCurrentInstance } from "vue";
+const { proxy }: any = getCurrentInstance();
+proxy.$openScroll();
+proxy.$closeScroll();
+```
+
+### 📝 使用示例 Demo.vue
+
 ```javascript
 
-  /* 使用示例 Demo.vue */
 <template>
 	<div class="ProgressTopBar">
 		<p v-for="(item, index) in items" :key="index">{{ item }}</p>
@@ -88,18 +98,9 @@ inject(scrollKey)?.$closeScroll();
 
 ```
 
-> 第二种 getCurrentInstance()
-
-```javascript
-import { getCurrentInstance } from "vue";
-const { proxy }: any = getCurrentInstance();
-proxy.$openScroll();
-proxy.$closeScroll();
-```
-
 ## 💌 原理
 
-```html{27}
+```html
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -130,7 +131,7 @@ proxy.$closeScroll();
 				z-index: -1;
 			}
 
-		  /**
+			/**
 			* Unrelated css
 			*/
 
