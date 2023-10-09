@@ -54,7 +54,7 @@ app.use(Loading, {
 
 - 我们目前更新了 7 款 loading 组件，每一款都有自己的默认颜色,也可以如下自定制。
 
-  > 这个配置对象还有一个 customized 属性，这个属性决定了 loading 组件的颜色展示。
+  > 这个配置对象还有一个 customized 属性，这个属性的值决定了 loading 组件的颜色展示和遮罩的色彩呈现。（它们都是非必填）
   > ![Alt text1](/image-1.png)
 
   > ![Alt text2](/image-2.png)
@@ -72,21 +72,25 @@ app.use(Loading, {
 ```js{3}
 app.use(Loading, {
 	loadingType: 1,
-	customized: { top: "#54038a", left: "#05b631", right: "#eeaff7" },
+	customized: {top: "#54038a",left: "#05b631",right: "#eeaff7"},
 });
 ```
 
-```js{3}
+```js{7}
 app.use(Loading, {
 	loadingType: 2,
-	customized: { color: "red" },
+	/*
+	 我定制了loading颜色为红色、遮罩层为绿色
+	 通常我们不需要定制mask、loading ，颜色都具备默认值
+	*/
+	customized: { color: "red", mask: "green" },
 });
 ```
 
 ```js{3}
 app.use(Loading, {
 	loadingType: 3,
-	customized: { color: "#f4038a" },
+	customized: { mask: "rgba(126, 128, 117, 0.5)" },
 });
 ```
 
@@ -138,7 +142,7 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach((to) => {
-	// 第二个参数为关闭loading的时间，无参即是根据上下文环境300ms关闭
+	// 第二个参数为关闭loading的时间，无参即是根据上下文环境30ms关闭
 	if (to.meta.loading) hideLoading()(400);
 });
 ```
