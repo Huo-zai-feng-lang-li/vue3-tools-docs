@@ -17,8 +17,8 @@ pnpm install vue3-loading-plug
 
 ## 🛹 简介苍白请 您移步文档：
 
-- [一键轻松看-尝试刷新页面将自动随机展示 loading](https://huozaifenlangli.github.io/Vue3-template/#/home)<br />
-- [一键快阅文档](https://huozaifenlangli.github.io/vue3-tools-docs/vue3-loading-plug.html)
+- [一键快阅项目演示-尝试**刷新页面会自动随机的展示七种 loading**](https://huozaifenlangli.github.io/Vue3-template/#/home)<br />
+<!-- - [一键快阅文档](https://huozaifenlangli.github.io/vue3-tools-docs/vue3-loading-plug.html) -->
 
 ## ✈️ 使用方法
 
