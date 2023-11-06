@@ -317,6 +317,44 @@ onMounted(() => {
 });
 ```
 
+### customScroll <br />
+
+> 滚轮自动控制**页面的滚动方向**
+
+- 测试地址 https://zhang-kun8888.gitee.io/vite--ts--vue3---template/#/monitoringView
+- 当页面没有竖向滚动条，如果滚动滑轮则鼠标滚轮控制页面横向滚动（如果有）
+- 当页面有竖向滚动条，如果滚动滑轮则鼠标滚轮还是优先控制页面的竖向滚动
+- 注意 💡：不能和 handleDiagramInteraction 函数共同使用
+
+```javascript{1}
+import { customScroll } from "vue3-directive-tools";
+window.addEventListener(
+	"wheel",
+	function (event) {
+		customScroll(event, ".workflow-right");// 传入需要滚动的dom class
+	},
+	{ passive: false }
+);
+```
+
+### handleDiagramInteraction <br />
+
+> 滚轮控制页面**缩放**，左键可拖动缩放区域
+
+```javascript{1}
+import { handleDiagramInteraction } from "vue3-directive-tools";
+
+// 第一种方式：在合适的处理条件下使用动态导入传参
+import("./js/dragView").then((module) => {
+	module.handleDiagramInteraction(".workflow-right"); // 传入需要缩放的dom class
+});
+
+// 第二种方式：在dom加载完后执行，不使用动态导入方式
+onMounted(() => {
+	handleDiagramInteraction(".workflow-right");
+});
+```
+
 ## 5、npm 命令大全(扩展)
 
 > 以下是一些常见的 npm 命令：
