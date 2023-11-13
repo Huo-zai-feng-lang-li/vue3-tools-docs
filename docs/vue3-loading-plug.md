@@ -143,7 +143,6 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach((to) => {
-	// 第二个参数为关闭loading的时间，无参即是根据上下文环境300ms关闭
 	if (to.meta.loading) hideLoading()(400);
 });
 ```
