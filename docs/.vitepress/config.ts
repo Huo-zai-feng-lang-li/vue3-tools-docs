@@ -38,7 +38,7 @@ export default defineConfig({
 				items: [
 					{
 						text: "Website-zhangKun",
-						link: "https://huozaifenlangli.github.io/Website-zhangkun/home.html",
+						link: "https://huo-zai-feng-lang-li.github.io/Website-zhangkun/home.html",
 					},
 					{
 						text: "Directive-更新日志",
@@ -46,7 +46,7 @@ export default defineConfig({
 					},
 					{
 						text: "NPM-Project-地址",
-						link: "https://huozaifenlangli.github.io/Vue3-template/#/home",
+						link: "https://zhang-kun8888.gitee.io/vite--ts--vue3---template/#/home",
 					},
 				],
 			},
