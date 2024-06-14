@@ -1,8 +1,8 @@
 # VueTools 💙 NPM & CSDN
 
 Hi there :wave: This is a document running **NPM** within your **browser tab**!
-[npm project Preview](https://huozaifenlangli.github.io/Vue3-template/) -
-[project Source code](https://github.com/huozaifenlangli/Vue3-template)
+[npm install Preview](https://www.npmjs.com/package/vue3-directive-tools) -
+[project Source code](https://github.com/Huo-zai-feng-lang-li/vue3-tools-docs)
 
 ## Powered by Vite
 

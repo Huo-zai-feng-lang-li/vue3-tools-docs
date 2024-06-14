@@ -29,24 +29,25 @@ export default defineConfig({
 		sidebarMenuLabel: "菜单",
 		returnToTopLabel: "返回顶部",
 		nav: [
-			{ text: "STORE", link: "https://gitee.com/zhang-kun8888" },
+			{ text: "Gitee", link: "https://gitee.com/zhang-kun8888" },
+			{ text: "GitHub", link: "https://github.com/Huo-zai-feng-lang-li" },
 			{ text: "NPM", link: "https://www.npmjs.com/~huozaifenglangli" },
 			{ text: "CSDN", link: "https://blog.csdn.net/m0_57904695?type=blog" },
 
 			{
-				text: "Dropdown Menu",
+				text: "More menus",
 				items: [
 					{
 						text: "Website-zhangKun",
 						link: "https://huo-zai-feng-lang-li.github.io/Website-zhangkun/home.html",
 					},
 					{
-						text: "Directive-更新日志",
+						text: "vue3-directive-tools-更新日志",
 						link: "/UpdateLog/vue3-directive-tools.md",
 					},
 					{
-						text: "NPM-Project-地址",
-						link: "https://zhang-kun8888.gitee.io/vite--ts--vue3---template/#/home",
+						text: "WeChat",
+						link: "https://github.com/Huo-zai-feng-lang-li/export-diyStyle-js/blob/main/WeChat.jpg",
 					},
 				],
 			},

@@ -4,7 +4,9 @@
 
 ## 📦 体验
 
-[一键速看](https://huozaifenlangli.github.io/Vue3-template/#/scroll)
+[项目预览](https://huo-zai-feng-lang-li.github.io/Vue3-template/#/scroll)
+
+- Tips: 尝试向下滚动屏幕试试 🤖
 
 ## 🌍 安装
 
