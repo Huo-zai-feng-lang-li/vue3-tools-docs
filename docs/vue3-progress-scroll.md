@@ -306,3 +306,83 @@ proxy.$closeScroll();
 	</body>
 </html>
 ```
+## ♻️ 另一种实现思路
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>可视化CSS进度条</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 隐藏滚动条 */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    #zk-container {
+      margin: auto;
+      text-align: center;
+      width: 700px;
+      font-size: 20px;
+      padding: 15px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    #zk-container::before {
+      content: '';
+      position: fixed;
+      height: 5px;
+      left: 0;
+      top: 0;
+      right: 0;
+      background: #ffc107;
+      /* 优化动画性能 
+       * 告知浏览器某个元素预计将会有变化（如位置、大小、颜色等）
+      */
+      animation: scale1 linear;
+      /*
+       * 滚动条动画时间线
+       * scroll(root)表示滚动条动画时间线为根元素滚动条
+       * 其他数据 可参考MDN文档 如
+       * https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline
+       */
+      animation-timeline: scroll(root);
+      transform-origin: 0 0;
+
+    }
+
+    @keyframes scale1 {
+      0% {
+        transform: scaleX(0);
+      }
+
+      100% {
+        transform: scaleX(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="zk-container"> </div>
+  <script>
+    const container = document.getElementById('zk-container');
+    let text = '尝试向下滚动-,';
+    let repeatCount = 500; // 重复次数
+
+    // 使用Array.join生成重复文本,501 个元素之间（即 500 个间隙）会插入 500 次 text 字符串。
+    container.textContent = new Array(repeatCount + 1).join(text);
+  </script>
+</body>
+
+</html>
+```
