@@ -1,6 +1,6 @@
 # 你的 Pinia 加密插件
 
-> 你的 Pinia 加密插件是一个基于 crypto-js 封装的实用 hooks 工具，用于在 Vue.js 应用程序中加密和解密敏感数据。它提供了一种简单且安全的方式来保护你的数据。
+> 你的 Pinia 加密插件是一个基于 crypto-js 封装的实用 hooks 工具，用于在 Vue.js 应用程序中加密和解密敏感数据。它提供了一种简单且安全的方式来保护你的数据。[npm](https://www.npmjs.com/package/vue3-encryption-plugin)
 
 ## 🌍 安装
 

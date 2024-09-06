@@ -7,7 +7,7 @@ titleTemplate: Tools & Vue3 & Ts .
 hero:
   name: 彩色之外
   text: NPM & Tools & Vue3 & Ts .
-  tagline: 基于 Vue3 + Ts 的 directive 及 Hooks 的 npm 插件。它允许您轻松地在项目中添加多种功能，它采用 Ts 方式开发，与 Vue3 更加搭配, 帮您快速完成开发功能、您只需要使用功能 v-xx:"xx"; 即可享受开发带来的乐趣！~
+  tagline: 欢迎来到 NPM 彩色之外（Next-Tool），旨在突出极简、高效率的代码，让代码更简洁，更易理解，更易学习。这里是All npm文档
   actions:
     - theme: brand
       text: Get Started

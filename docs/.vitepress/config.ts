@@ -59,24 +59,34 @@ export default defineConfig({
       {
         text: "开篇_前言",
         items: [
-          { text: "梦开始的地方 Document-index ", link: "/example" }
+          { text: "梦开始的地方 ✨ Home ", link: "/example" }
           // ...
         ]
       },
       {
         text: "NPM包 STORE",
         items: [
+          { text: "vue-print-last NPM", link: "/vue-print-last" },
+          { text: "vue3-blind-watermark NPM", link: "/vue3-blind-watermark" },
           { text: "directive-tools NPM", link: "/vue3-directive-tools" },
+          { text: "element-plus-utils NPM", link: "/element-plus-utils" },
+          { text: "lodash-es-utils NPM", link: "/lodash-es-utils" },
           { text: "loading-plugin NPM", link: "/vue3-loading-plug" },
           { text: "encryption-plugin NPM", link: "/vue3-encryption-plugin" },
           { text: "progress-scroll NPM", link: "/vue3-progress-scroll" },
-          { text: "vue-print-last NPM", link: "/vue-print-last" },
-          { text: "element-plus-utils NPM", link: "/element-plus-utils" }
+          { text: "perfect-auto-screen-fit NPM", link: "/vue3-perfect-auto-screen-fit" },
+         
+
         ]
       },
       {
         text: "DEMO展示区",
-        items: [{ text: "website-tipping DEMO", link: "/website-tipping" }]
+        items: [
+          { text: "website-tipping DEMO", link: "/website-tipping" },
+          { text: "export-diyStyle-js DEMO", link: "/export-diyStyle-js" }
+
+
+        ]
       }
     ]
   }

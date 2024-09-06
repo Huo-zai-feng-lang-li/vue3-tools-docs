@@ -14,6 +14,7 @@
 - 建议您下载发行的最新版本以获得更加完整丰富插件功能生态。
 
   > 本插件基于 [vue3-print-nb](https://github.com/Power-kxLee/vue3-print-nb) 开发，并使用 TypeScript 完全重写，以更好地支持 Vue 3 的 setup 函数。
+  > [npm](https://www.npmjs.com/package/vue-print-last)
 
 ## 特性
 
@@ -180,9 +181,10 @@ function handlePrint() {
 
 用于手动调用打印功能。
 
-#### 参数说明
-
 [VuePrintLast 类参数说明](/vue-print-last-params-doc.html)
+
+<img alt="logo" src="/print-params.png"  />
+
 
 ## 使用示例
 
