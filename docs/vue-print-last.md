@@ -181,8 +181,6 @@ function handlePrint() {
 
 用于手动调用打印功能。
 
-[VuePrintLast 类参数说明](/vue-print-last-params-doc.html)
-
 <img alt="logo" src="/print-params.png"  />
 
 
