@@ -39,19 +39,19 @@ app
 
 <p align="center">
   <a target="_blank" href="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark">
-  <img alt="1" src="./1.gif" width="800">
+  <img alt="1" src="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark/blob/main/1.gif" width="800">
   </a>
 </p>
 
 <p align="center">
   <a target="_blank" href="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark">
-  <img alt="2" src="./2.gif" width="800">
+  <img alt="2" src="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark/blob/main/2.gif" width="800">
   </a>
 </p>
 
 <p align="center">
   <a target="_blank" href="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark">
-  <img alt="3" src="./3.gif" width="800">
+  <img alt="3" src="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark/blob/main/3.gif" width="800">
   </a>
 </p>
 
