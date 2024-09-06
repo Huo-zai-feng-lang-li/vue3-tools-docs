@@ -182,26 +182,7 @@ function handlePrint() {
 
 #### 参数说明
 
-| 参数 | 类型 | 说明 | 默认值 |
-| --- | --- | --- | --- |
-| `el` | `string` \| `HtmlElement` | 需要打印的元素，支持 css 选择器或 dom 节点 | - |
-| `standard` | `string` | 文档类型，默认是 html5，可选 html5，loose，strict | 'html5' |
-| `noPrintSelector` | `string[]` \| `string` | 打印时需要忽略的 css 选择器 | - |
-| `preview` | `boolean` | 是否启用打印预览功能 | `false` |
-| `previewTitle` | `string` | 预览窗口的标题 | '打印预览' |
-| `previewPrintBtnLabel` | `string` | 预览窗口中的打印按钮标签 | '打印' |
-| `extraCss` | `string` | 额外的 CSS 文件路径（不建议使用"../"相对路径） | - |
-| `customSize` | `object` | 传递纸张自定义尺寸 | { width: "280mm", height: "297mm" } |
-| `watermark` | `string` | 水印文字,非空字符串就会显示 | 不显示 |
-| `extraHead` | `string` | 额外的 `<head>` 内容 | - |
-| `url` | `string` | 打印指定的网址内容 | - |
-| `asyncUrl` | `function` | 异步加载 URL 内容的方法 | - |
-| `zIndex` | `number` | 预览窗口的 `z-index`值 | 20002 |
-| `openCallback` | `function` | 打印窗口打开时的回调 | - |
-| `closeCallback` | `function` | 打印窗口关闭时的回调 | - |
-| `beforeOpenCallback` | `function` | 打印窗口打开前的回调（打印预览使用） | - |
-| `previewBeforeOpenCallback` | `function` | 预览框架 iframe 加载前的回调（预览使用） | - |
-| `previewOpenCallback` | `function` | 预览框架 iframe 加载完成后的回调（预览使用） | - |
+[VuePrintLast 类参数说明](/vue-print-last-params-doc.html)
 
 ## 使用示例
 
