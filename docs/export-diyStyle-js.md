@@ -43,7 +43,7 @@
 
 # JS Plus
 
-简体中文 | [灵活英文](./README.en-CN.md)
+简体中文 
 
 High performance & Simplicity Vue3 Hooks library
 
