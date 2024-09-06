@@ -28,7 +28,6 @@
 > JavaScript：一种脚本语言，用于在浏览器和 Node.js 中实现网页和服务器端的 JavaScript 代码。
 > Css：一种样式表语言，用于描述 HTML 的样式。
 
-</div>
 
 <p align="center">
 <a href="https://img.shields.io/badge/npm-v9.6.6-2081C1"><img src="https://img.shields.io/badge/npm-v9.6.6-2081C1" alt="npm package"></a>
