@@ -10,7 +10,7 @@ export default defineConfig({
   markdown: {
     lineNumbers: true
   },
-  head: [["link", { rel: "icon", href: "/favicon.png" }]],
+  head: [["link", { rel: "icon", href: "https://github.com/Huo-zai-feng-lang-li/vue3-tools-docs/blob/main/docs/public/favicon.png" }]],
   themeConfig: {
     search: {
       provider: "local"
