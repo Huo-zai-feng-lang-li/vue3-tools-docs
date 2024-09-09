@@ -10,7 +10,7 @@ export default defineConfig({
   markdown: {
     lineNumbers: true
   },
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  head: [["link", { rel: "icon", href: "/favicon.png" }]],
   themeConfig: {
     search: {
       provider: "local"
