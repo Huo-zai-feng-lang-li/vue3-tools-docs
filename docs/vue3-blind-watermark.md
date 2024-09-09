@@ -35,29 +35,24 @@ app
 	.mount("#app");
 ```
 
-### 盲水印测试
+### 盲水印效果测试
 
 <p align="center">
   <a target="_blank" href="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark">
-  <img alt="1" src="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark/blob/main/1.gif" width="800">
+  <img alt="1" src="/1.gif" width="800">
   </a>
 </p>
 
-<p align="center">
-  <a target="_blank" href="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark">
-  <img alt="2" src="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark/blob/main/2.gif" width="800">
-  </a>
-</p>
 
 <p align="center">
   <a target="_blank" href="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark">
-  <img alt="3" src="https://github.com/Huo-zai-feng-lang-li/vue3-blind-watermark/blob/main/3.gif" width="800">
+  <img alt="3" src="/3.gif" width="800">
   </a>
 </p>
 
 ### 显式水印
 
-- <a target="_blank" href="https://zhang-kun8888.gitee.io/vue3-tools-docs/vue3-directive-tools.html#watermarker
+- <a target="_blank" href="https://huo-zai-feng-lang-li.github.io/vue3-tools-docs/vue3-directive-tools.html#watermarker
   ">盲水印启动后，可以根据需求是否继续使用显式水印
   </a>
 
