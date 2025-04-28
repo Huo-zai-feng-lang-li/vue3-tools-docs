@@ -5,7 +5,7 @@ export default defineConfig({
   lang: "zh-CN",
   title: "Vue3-Tools Docs",
   base: "/vue3-tools-docs/",
-  description: "张坤的NPM包 文档说明",
+  description: "ZK的NPM包 文档说明",
   lastUpdated: true,
   markdown: {
     lineNumbers: true
