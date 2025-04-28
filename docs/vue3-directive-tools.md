@@ -1,4 +1,4 @@
-# 你的代码工具箱-瑞士军刀
+# vue3-directive-tool
 
 > ♻️基于 Vue3 + Ts 的 directive 及 Hooks 的 npm 插件。它允许您轻松地在项目中添加多种功能，它采用 Ts 方式开发，与 Vue3 更加搭配, 帮您快速完成开发功能、您只需要使用功能 v-xx:"xx"; 即可享受开发带来的乐趣！~ [npm](https://www.npmjs.com/package/vue3-directive-tools)
 
